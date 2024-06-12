@@ -1,0 +1,20 @@
+name: MY first YAML File
+
+on: [push]
+
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+      steps:
+        -name: first listing
+        run: | 
+        pwd
+        ls -lha
+
+        -name: Checkout code
+        uses: actions/checkout@v4
+
+        -name: Second listing
+        run: |
+        pwd
+        ls -lha
